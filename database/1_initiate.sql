@@ -1,10 +1,11 @@
 -- +migrate Up
--- +migrate StatementBagin
+-- +migrate StatementBegin
 
-CREATE TABLE person{
-    id BIGINT NOT NULL,
+CREATE TABLE person
+(
+    id         BIGINT NOT NULL,
     first_name VARCHAR(256),
-    last_name VARCHAR(256)
-    }
+    last_name  VARCHAR(256)
+)
 
 -- +migrate StatementEnd
