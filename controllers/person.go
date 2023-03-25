@@ -56,7 +56,7 @@ func UpdatePerson(c *gin.Context) {
 		panic(err)
 	}
 
-	person.ID = int(int64(id))
+	person.ID = int64(id)
 
 	err = repository.UpdatePerson(database.DbConnection, person)
 
@@ -73,7 +73,7 @@ func DeletePerson(c *gin.Context) {
 	var person structs.Person
 	id, err := strconv.Atoi(c.Param("id"))
 
-	person.ID = int(int64(id))
+	person.ID = int64(id)
 
 	err = repository.DeletePerson(database.DbConnection, person)
 	if err != nil {
